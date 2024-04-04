@@ -1,0 +1,68 @@
+/* MiniTv.js */
+.miniTvConatiner{
+    position: relative;
+    width: 100%;
+}
+.miniTvImg{
+    max-width: 559px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 2;
+}
+.remoteController{
+    width: 374px;
+    position:absolute;
+    bottom: 0%;
+    right: 0%;
+    /*transform: translate3d( 2.5%, 2.7%, 0 );*/
+    transform: translate3d( 10%, 10%, 0 );
+    opacity: 70%;
+    transition: 0.3s;
+    z-index: 2;
+    cursor: pointer;
+}
+.remoteController:hover{
+    transform: rotateX(40deg) ;
+    opacity: 100%;
+}
+
+
+
+/* InnerImage.js */
+.samplePPTImg{
+    width: 414px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -71%, 0);
+    width: 414px;
+    height: 300px;
+}
+
+.old-tv {
+    position: absolute;
+    
+    z-index: 1;
+    top:50%;
+    left:50%;
+    width: 420px;
+    height: 310px;
+
+    background-image: url("./noise.png");
+    opacity: 5%;
+    /* pointer-events: none; */
+
+    animation: shift 0.2s linear infinite both;
+}
+
+@keyframes shift {
+    0% {
+        transform: translate3d(-50%, -80%, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, -60%, 0);
+    }
+}

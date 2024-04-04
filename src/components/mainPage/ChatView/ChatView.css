@@ -1,0 +1,47 @@
+/* ChatView.js */
+.sideChatViewContainer{
+    width: 513px;
+    height: 100%;
+    background-color: #E4E1DC;
+    z-index: 2;
+    box-shadow: -5px 0 5px -5px rgba(0,0,0,0.45);
+    
+}
+
+.chatHeading{
+    font-family: main;
+    text-align: center;
+}
+.chatContainer{
+    height:90%;
+    width: 94%;
+    margin: 3%;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: left;
+    box-sizing: border-box;
+    padding: 15px 15px;
+    padding-bottom: 30px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    gap: 10px;
+    
+}
+.chatContainer::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+/* ChatItem.js */
+.chatItem{
+    color: #E4E1DC;
+}
+#userName{
+    font-weight: bold;
+    font-size: 16px;
+}
+#userChat{
+    font-size: 15px;
+    color: rgba(255,255,255,0.8);
+}
