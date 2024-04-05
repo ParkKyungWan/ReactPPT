@@ -7,8 +7,6 @@ const MiniTv=(props)=> {
   return (
     <div className="miniTvConatiner">
 
-      <h3 className='howManyOnline'>접속자: 0명</h3>
-
       <InnerImage tvSize="small" {...props}/>
       <img alt="" src="/images/mainPage/miniTv.png" className="miniTvImg"/>
       <img 

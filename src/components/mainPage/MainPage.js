@@ -6,7 +6,7 @@ import './MainPage.css';
 import { useState } from 'react';
 
 
-const MainPage = () => {
+const MainPage = ( chatProps ) => {
 
   /* big: 큰화면, small: 작은화면 */
   const [tvSize, setTvSize] = useState("small");
@@ -37,7 +37,7 @@ const MainPage = () => {
               "small": <MiniTv switchTv={switchTv} slide={slide} total={total} setSlide={setSlide} />
             }[tvSize]
           }
-          <ChatView tvSize={tvSize} switchTv={switchTv} nextSlide={nextSlide} previousSlide={previousSlide} />
+          <ChatView tvSize={tvSize} switchTv={switchTv} nextSlide={nextSlide} previousSlide={previousSlide} chatProps={chatProps}/>
         </div>
     </div>
   );
