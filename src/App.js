@@ -1,14 +1,20 @@
-import React, {useEffect} from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import './App.css';
 import MainPage from './components/mainPage/MainPage';
+import ChatPage from './components/chatPage/ChatPage';
 
 
 function App() {
   
-
   return (
-    <MainPage/>
+    <Router>
+        <Routes>
+          <Route path="/" element={<MainPage/>} />
+          <Route path="/chatting" element={<ChatPage/>} />
+        </Routes>
+    </Router>
   );
 }
 

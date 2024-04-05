@@ -30,13 +30,15 @@ const MainPage = () => {
 
   return (
     <div className="BackgroundContainer">
-        {
+        <div className='BackgroundFlex'>
           {
-            "big": <BigTv switchTv={switchTv} slide={slide} total={total} />,
-            "small": <MiniTv switchTv={switchTv} slide={slide} total={total} setSlide={setSlide} />
-          }[tvSize]
-        }
-        <ChatView tvSize={tvSize} switchTv={switchTv} nextSlide={nextSlide} previousSlide={previousSlide} />
+            {
+              "big": <BigTv switchTv={switchTv} slide={slide} total={total} />,
+              "small": <MiniTv switchTv={switchTv} slide={slide} total={total} setSlide={setSlide} />
+            }[tvSize]
+          }
+          <ChatView tvSize={tvSize} switchTv={switchTv} nextSlide={nextSlide} previousSlide={previousSlide} />
+        </div>
     </div>
   );
 }

@@ -3,6 +3,7 @@
     position: relative;
     width: 100%;
     display: flex;
+    flex:8;
 }
 .bigTvOuter{
     position: absolute;
@@ -29,7 +30,7 @@
     inset: -200%;
 
     background-image: url("./noise.png");
-    opacity: 8%;
+    opacity: 9%;
     /* pointer-events: none; */
 
     animation: shift-big 0.2s linear infinite both;

@@ -6,6 +6,7 @@
     flex-direction: row;
     overflow: hidden;
     position: relative;
+    flex-wrap: nowrap;
     
 }
 .BackgroundContainer::before{
@@ -19,4 +20,15 @@
     right:0px;
     bottom:0px;
 
+}
+.BackgroundFlex{
+    width:100%;height:100%;
+    display: flex;
+    flex-direction: row;
+}
+.howManyOnline{
+    font-family: 'main';
+    position: absolute;
+    left: 10px;
+    font-size: 23px;
 }
