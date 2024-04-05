@@ -1,11 +1,12 @@
 import InnerImage from './InnerImage';
 import './BigTv.css';
 
-const BigTv=()=> {
+const BigTv=(props)=> {
+  
   return (
     <div className="bigTvConatiner">
-      <img className="bigTvOuter" src="/images/mainPage/bigTv.png" />
-        <InnerImage tvSize="big" />
+      <img alt="" className="bigTvOuter" src="/images/mainPage/bigTv.png" />
+        <InnerImage tvSize="big" {...props} />
     </div>
   );
 }

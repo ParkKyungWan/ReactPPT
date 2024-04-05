@@ -18,21 +18,36 @@
     right: 0%;
     /*transform: translate3d( 2.5%, 2.7%, 0 );*/
     transform: translate3d( 2.5%, 2.7%, 0 );
-    opacity: 70%;
     transition: 0.3s;
     z-index: 2;
     cursor: pointer;
+    filter: brightness(70%) grayscale(50%);
 }
 .remoteController:hover{
     transform: rotateX(40deg) translate3d( 10%, 20%, 0 );
-    
-    opacity: 100%;
+    filter: brightness(100%);
+}
+
+.phoneQR{
+    position:absolute;
+    bottom: -175px;
+    right: 230px;
+    z-index: 3;
+    width: 150px;
+    filter: brightness(70%) grayscale(50%);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.phoneQR:hover{
+    bottom: -30px;
+    filter: brightness(100%);
+    transform: rotate(0);
 }
 
 
 
 /* InnerImage.js */
-.samplePPTImg{
+.PPTImg{
     width: 414px;
     position:absolute;
     top: 50%;
@@ -54,15 +69,20 @@
     opacity: 5%;
     /* pointer-events: none; */
 
-    animation: shift 0.2s linear infinite both;
+    animation: shift 0.1s linear infinite both;
 }
 
 @keyframes shift {
     0% {
-        transform: translateX(-50%) translateY(-80%);
+        transform: translateX(-50%) translateY(-64%);
     }
-
+    50%{
+        transform: translateX(-50%) translateY(-64%);
+    }
+    51%{
+        transform: translateX(-50%) translateY(-76%);
+    }
     100% {
-        transform: translateX(-50%) translateY(-60%);
+        transform: translateX(-50%) translateY(-76%);
     }
 }

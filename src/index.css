@@ -36,3 +36,11 @@ code {
   height:100%;width:100%;
 }
 
+img::selection { background: none;  text-shadow: none; }
+
+body, div, img{
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}

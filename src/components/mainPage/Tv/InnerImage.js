@@ -4,12 +4,12 @@ const InnerImage=(props)=> {
   return (
     {
       "big" : <div className="InnerImageContainerBig" >
-                <img src="/images/mainPage/samplePPT.png" className= "samplePPTImgBig" />
+                <img alt="" src={ "/images/ppt/슬라이드"+props.slide+".png"} className= "PPTImgBig" />
                 <div className="old-tv-big" style={{ backgroundImage: "/images/mainPage/noise.png"}} />
               </div> ,
       "small" : <div className="InnerImageContainer">
-                  <img src="/images/mainPage/samplePPT.png" className="samplePPTImg"/>
-                  <div className="old-tv" style={{ backgroundImage: "/images/mainPage/noise.png"}} />
+                  <img alt="" src={ "/images/ppt/슬라이드"+props.slide+".png"} className="PPTImg"/>
+                  <div className="old-tv" style={{ backgroundImage: "/images/mainPage/noise.png"}} /> 
                 </div>  
     }[props.tvSize]
   );

@@ -16,19 +16,25 @@
     width: 513px;
     height: 100%;
     background-color: #E4E1DC;
-    z-index: 2;
+    z-index: 4;
     box-shadow: -5px 0 5px -5px rgba(0,0,0,0.45);
+
+    display: flex;
+    flex-direction: column;
+
     
 }
+
 
 .chatHeading{
     font-family: main;
     text-align: center;
 }
 .chatContainer{
-    height:90%;
+    flex: 9;
     width: 94%;
     margin: 3%;
+    margin-bottom: 0;
     background-color: rgba(0,0,0,0.7);
     border-radius: 15px;
     display: flex;
@@ -46,6 +52,37 @@
     display: none; /* Chrome, Safari, Opera*/
 }
 
+
+.remoteIconsFlex{
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    align-items: center;
+    justify-content: center;
+}
+.remoteIconBtn{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+.remoteIconBtn:hover{
+    background-color: rgba(0,0,0,0.2);
+}
+.remoteIconBtn:active{
+    background-color: rgba(0,0,0,0.4);
+}
+.remoteIcon{
+    height: 30px;
+    opacity: 0.6;
+}
+
 /* ChatItem.js */
 .chatItem{
     color: #E4E1DC;
@@ -60,3 +97,5 @@
     color: rgba(255,255,255,0.8);
     font-family: 'chatMessage';
 }
+
+
