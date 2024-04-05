@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'chatMessage';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.1/ChosunSm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'chatName';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunKm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* ChatView.js */
 .sideChatViewContainer{
     width: 513px;
@@ -40,8 +53,10 @@
 #userName{
     font-weight: bold;
     font-size: 16px;
+    font-family: 'chatName';
 }
 #userChat{
     font-size: 15px;
     color: rgba(255,255,255,0.8);
+    font-family: 'chatMessage';
 }

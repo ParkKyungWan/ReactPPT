@@ -1,0 +1,46 @@
+/* BigTv.js */
+.bigTvConatiner{
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+.bigTvOuter{
+    position: absolute;
+    align-self: center;
+    width: 114%; height: 118%;
+    left: -7%; top: -10%;
+    z-index: 2;
+}
+
+/* InnerImage.js */
+.InnerImageContainerBig{
+    width: 100%; height: 100%;
+}
+.samplePPTImgBig{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    transform: translate3d(-50%, 0%, 0); 
+}
+.old-tv-big {
+    position: absolute;
+    z-index: 2;
+    inset: -200%;
+
+    background-image: url("./noise.png");
+    opacity: 6.2%;
+    /* pointer-events: none; */
+
+    animation: shift-big 0.2s linear infinite both;
+}
+
+@keyframes shift-big {
+    0% {
+        transform: translateX(10%) translateY(10%);
+    }
+
+    100% {
+        transform: translateX(-10%) translateY(-10%);
+    }
+}
