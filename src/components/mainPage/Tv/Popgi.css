@@ -1,0 +1,57 @@
+.PopgiContainer{
+
+    width: 600px;
+    height: 450px;
+    position: absolute;
+    bottom: -330px;
+    left: -180px;
+    z-index: 3;
+    background-color: black;
+    transform: scale3d( 80%, 70%, 70%);
+    filter: brightness(70%) grayscale(70%);
+    transition: 0.7s;
+    cursor: pointer;
+
+    
+}
+
+.PopgiContainer-active{
+    width: 600px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    background-color: black;
+    transform: translateX(-50%) translateY(-50%) scale3d(120%,120%,120%);
+    filter: brightness(93%) grayscale(0%);
+    transition: 0.7s;
+    cursor: pointer;
+
+}
+.PopgiContainer::after, .PopgiContainer-active::after{
+    content:'';
+    position: absolute;
+    top:0;left:0;
+    width: 100%; height: 100%;
+    background: url(./browser.png);
+    background-size:cover;
+    box-shadow: 6px 6px 10px rgba(0,0,0,0.5);
+}
+
+.PopgiContainer:hover{
+    transform: translateY(-15%) scale3d( 80%, 70%, 70%);
+    filter: brightness(100%);
+}
+
+.Popgi-iframe{
+    width: 94%;
+    height: 100%;
+    border-radius: 3%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-51.2%) translateY(-43%);
+    border:none;
+    z-index: 3;
+}

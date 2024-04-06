@@ -42,8 +42,8 @@
     background-color: rgba(0,0,0,0.7);
     border-radius: 15px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
     align-items: left;
     box-sizing: border-box;
     overflow-y: scroll;
@@ -92,6 +92,9 @@
 .chatItem{
     color: #E4E1DC;
 }
+.chatItem-old{
+    opacity: 0.33;
+}
 #userName{
     font-weight: bold;
     font-size: 16.5px;
@@ -102,5 +105,3 @@
     color: rgba(255,255,255,0.8);
     font-family: 'chatMessage';
 }
-
-

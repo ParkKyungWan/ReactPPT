@@ -11,7 +11,7 @@ const ChatView=(props)=> {
               return (
                 //채팅 보여주기
                 (message.user.name==="system")? "" :
-                <ChatItem key={message._id} chatColor={message.user.color} userName={message.user.name} userChat={message.chat}/>
+                <ChatItem key={message._id} chatColor={message.user.color} userName={message.user.name} userChat={message.chat} old={message.old}/>
                 
 
                 );}) 

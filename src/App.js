@@ -21,7 +21,13 @@ function App() {
 
   useEffect(()=>{
     socket.on('message',(message)=>{
-      setMessageList((prevState)=>prevState.concat(message));
+      setMessageList((prevState)=>[message].concat(prevState));
+    })
+    socket.on('oldMessage',(message)=>{
+      const oldmessage = message;
+      oldmessage.old = true;
+
+      setMessageList((prevState)=>prevState.concat(oldmessage));
     })
     setUserNickandColor();
   },[])
@@ -41,7 +47,6 @@ function App() {
     event.preventDefault();
     setMessage('');
     socket.emit("sendMessage", message, (res)=>{
-      console.log("sendMessage res",res);
     })
   }
 
